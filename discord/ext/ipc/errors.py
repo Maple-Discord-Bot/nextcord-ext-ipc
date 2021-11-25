@@ -1,5 +1,9 @@
-from discord import DiscordException
+class DiscordException(Exception):
+    """Base exception class for discord
+    Ideally speaking, this could be caught to handle any exceptions raised from this library.
+    """
 
+    pass
 
 class IPCError(DiscordException):
     """Base IPC exception class"""
