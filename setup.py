@@ -41,7 +41,7 @@ with open("requirements.txt") as stream:
     install_requires = stream.read().splitlines()
 
 packages = [
-    "nextcord.ext.ipc",
+    "discord.ext.ipc",
 ]
 
 project_urls = {
@@ -52,7 +52,7 @@ project_urls = {
 
 _version_regex = r"^version = ('|\")((?:[0-9]+\.)*[0-9]+(?:\.?([a-z]+)(?:\.?[0-9])?)?)\1$"
 
-with open("nextcord/ext/ipc/__init__.py") as stream:
+with open("discord/ext/ipc/__init__.py") as stream:
     match = re.search(_version_regex, stream.read(), re.MULTILINE)
 
 version = match.group(2)
@@ -83,7 +83,7 @@ setuptools.setup(
     extras_require=extras_require,
     install_requires=install_requires,
     license="Apache Software License",
-    name="nextcord-ext-ipc",
+    name="discord-ext-ipc",
     packages=packages,
     project_urls=project_urls,
     python_requires=">=3.6.0",

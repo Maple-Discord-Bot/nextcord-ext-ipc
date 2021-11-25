@@ -1,7 +1,7 @@
 import logging
 
 import aiohttp.web
-from nextcord.ext.commands import Cog
+from discord.ext.commands import Cog
 
 from .errors import *
 
